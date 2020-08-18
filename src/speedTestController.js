@@ -4,27 +4,29 @@ require('dotenv').config()
 module.exports = {
   async get(request, response) {
     let speedtestUpload = new FastSpeedtest({
-      token: process.env.API_KEY, // required
-      verbose: false, // default: false
-      timeout: 10000, // default: 5000
-      https: true, // default: true
-      urlCount: 5, // default: 5
-      bufferSize: 8, // default: 8
+      token: process.env.API_KEY,      
+      verbose: false,
+      timeout: 10000,
+      https: true,
+      urlCount: 5,
+      requestUrl: "https://ipv4-c001-poa001-avato-isp.1.oca.nflxvideo.net/speedtest/range/0-2048?c=br&n=262907&v=5&e=1597756090&t=kDplcv6f_OhG7l5WOYSYeZcKhyA",
+      bufferSize: 8,
       testType: 'upload',
-      unit: FastSpeedtest.UNITS.Mbps, // default: Bps
-      proxy: 'http://optional:auth@my-proxy:123' // default: undefined
+      unit: FastSpeedtest.UNITS.Mbps,
+      proxy: 'http://optional:auth@my-proxy:123'
     });
 
     let speedtestDownload = new FastSpeedtest({
-      token: process.env.API_KEY, // required
-      verbose: false, // default: false
-      timeout: 10000, // default: 5000
-      https: true, // default: true
-      urlCount: 5, // default: 5
-      bufferSize: 8, // default: 8
+      token: process.env.API_KEY,
+      verbose: false,      
+      timeout: 10000,
+      https: true,      
+      urlCount: 5,
+      requestUrl: "https://ipv4-c001-poa001-avato-isp.1.oca.nflxvideo.net/speedtest/range/0-2048?c=br&n=262907&v=5&e=1597756090&t=kDplcv6f_OhG7l5WOYSYeZcKhyA",
+      bufferSize: 8,
       testType: 'download',
-      unit: FastSpeedtest.UNITS.Mbps, // default: Bps
-      proxy: 'http://optional:auth@my-proxy:123' // default: undefined
+      unit: FastSpeedtest.UNITS.Mbps,
+      proxy: 'http://optional:auth@my-proxy:123'
     });
 
     console.log('reload')
