@@ -13,7 +13,7 @@ module.exports = {
       bufferSize: 8,
       testType: 'upload',
       unit: FastSpeedtest.UNITS.Mbps,
-      proxy: 'http://optional:auth@my-proxy:123'
+      proxy: '177.87.220.82'
     });
 
     let speedtestDownload = new FastSpeedtest({
@@ -26,7 +26,7 @@ module.exports = {
       bufferSize: 8,
       testType: 'download',
       unit: FastSpeedtest.UNITS.Mbps,
-      proxy: 'http://optional:auth@my-proxy:123'
+      proxy: '177.87.220.82'
     });
 
     console.log('reload')
